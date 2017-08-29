@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 
 import Adjuster from './components/Adjuster'
-import MediumSample from './components/MediumSample'
+import SampleMedium from './components/SampleMedium'
+import SampleCode from './components/SampleCode'
 
 class App extends Component {
 
@@ -20,7 +21,8 @@ class App extends Component {
         return (
             <div>
                 <Adjuster values={values} onAdjust={this.onAdjust} />
-                <MediumSample values={values} />
+                <SampleCode values={values} />
+                <SampleMedium values={values} />
                 <pre>{JSON.stringify(values)}</pre>
             </div>
         )
