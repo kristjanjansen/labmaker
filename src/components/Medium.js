@@ -4,7 +4,6 @@ const styles = {
     wrapper: {
         background: 'white',
         fontFamily: 'sans-serif',
-        lineHeight: '2em'
     },
     logo: {
         marginBottom: '3rem'
@@ -34,9 +33,19 @@ const styles = {
         fontFamily: 'Merriweather Sans, sans-serif',
         fontWeight: 700,
         fontSize: '1.6rem',
-        opacity: 0.8
+        opacity: 0.8,
+        margin: '2rem 0 1rem 0'
+    },
+    body: {
+        fontFamily: '"PT Serif", serif',
+        fontSize: '1.2rem',
+        opacity: 0.8,
+        lineHeight: '2rem'
     }
 }
+
+import Code from '../components/Code'
+import Avatar from '../components/Avatar'
 
 const Medium = ({ tweaks }) => {
     const wrapper = {
@@ -53,14 +62,19 @@ const Medium = ({ tweaks }) => {
                 <img src="/svg/medium.svg" />
             </div>
             <div style={styles.profile}>
-                <div style={avatar}></div>
+                <Avatar tweaks={tweaks} />
                 <div>
                     <div style={styles.name}>Lee Chow</div>
                     <div style={styles.date}>Sep 26, 2016 • 15 min read</div>
                 </div>
             </div>
+            <Code />
             <div style={styles.title}>
                 So you want to be a data scientist
+            </div>
+            <div style={styles.body}>
+                You may have heard about machine learning from interesting applications like <a href="">spam filtering</a>, optical character recognition, and computer vision.
+                Getting started with machine learning is long process that involves going through several resources. There are books for newbies, academic papers, guided exercises, and standalone projects. It’s easy to lose track of what you need to learn among all these options.
             </div>
         </div>
     )
