@@ -4,7 +4,14 @@ const styles = {
     wrapper: {
         display: 'flex',
         flexDirection: 'column',
-        width: '10rem'
+        width: '10rem',
+        position: 'fixed',
+        top: 0,
+        right: 0,
+        bottom: 0,
+        background: 'white',
+        padding: '0.5rem 1rem',
+        borderLeft: '1px solid rgba(0,0,0,0.1)'
     },
     field: {
         marginBottom: '0.5rem',

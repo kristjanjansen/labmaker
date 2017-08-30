@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
 import Tweaker from './components/Tweaker'
-import SampleMedium from './components/SampleMedium'
-import SampleCode from './components/SampleCode'
+import Medium from './components/Medium'
+import Code from './components/Code'
 
 class App extends Component {
 
@@ -22,11 +22,11 @@ class App extends Component {
             <div>
                 <Tweaker tweaks={tweaks} onTweak={this.onTweak} />
                 <hr />
-                <SampleCode tweaks={tweaks} />
+                <Code tweaks={tweaks} />
                 <hr />
-                <SampleMedium tweaks={tweaks} />
+                <Medium tweaks={tweaks} />
                 <hr />
-                <pre>{JSON.stringify(tweaks)}</pre>
+                <pre>{/*JSON.stringify(tweaks)*/}</pre>
             </div>
         )
     }

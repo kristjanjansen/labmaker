@@ -11,20 +11,20 @@ const styles = {
     }
 }
 
-const SampleCode = ({ tweaks }) =>
+const Code = ({ tweaks }) =>
     <SyntaxHighlighter
         language="javascript"
         style={style}
         customStyle={styles.code}
         CodeTag="div"
     >
-{`import React from 'react'
-
-const SampleCode = ({ values }) =>
-    <div>
-        {values.first}
-    </div>
+{`def inference(images):
+    with tf.variable_scope('conv1') as scope:
+        kernel = _variable_with_weight_decay('weights',
+             shape=[5, 5, 3, 64],
+             stddev=5e-2,
+             wd=0.0)
 `}            
     </SyntaxHighlighter>
 
-export default SampleCode
+export default Code

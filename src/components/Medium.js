@@ -38,7 +38,7 @@ const styles = {
     }
 }
 
-const SampleMedium = ({ tweaks }) => {
+const Medium = ({ tweaks }) => {
     const wrapper = {
         ...styles.wrapper,
         padding: tweaks.first + 'em'
@@ -66,4 +66,4 @@ const SampleMedium = ({ tweaks }) => {
     )
 }
 
-export default SampleMedium
+export default Medium
