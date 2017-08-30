@@ -11,11 +11,19 @@ const styles = {
     }
 }
 
-const Code = ({ tweaks }) =>
+const Code = ({ tweaks, rounded }) => {
+
+    const customStyle = {
+        ...styles.code,
+        borderRadius: rounded ? '5px' : '',
+        background: tweaks.background
+    }
+
+    return (
     <SyntaxHighlighter
         language="javascript"
         style={style}
-        customStyle={styles.code}
+        customStyle={customStyle}
         CodeTag="div"
     >
 {`def inference(images):
@@ -26,5 +34,7 @@ const Code = ({ tweaks }) =>
              wd=0.0)
 `}            
     </SyntaxHighlighter>
+    )
+}
 
 export default Code

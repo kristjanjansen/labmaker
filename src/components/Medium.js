@@ -50,21 +50,21 @@ const Medium = ({ tweaks }) =>
             <img src="/svg/medium.svg" />
         </div>
         <div style={styles.profile}>
-            <Avatar image={tweaks.avatar} />
+            <Avatar tweaks={tweaks} image={tweaks.avatar} size="2.2" />
             <div style={styles.about}>
                 <div>
-                    <span style={styles.link}>Lee Chow</span> 
+                    <span style={styles.link}>{tweaks.employeename}</span> 
                     <span style={styles.text}>in</span> 
                     <span style={styles.link}>{tweaks.name}</span> 
                 </div>
                 <div style={styles.text}>Sep 26, 2016 • 15 min read</div>
             </div>
         </div>
-        <Code />
+        <Code tweaks={tweaks} />
         <div style={styles.title}>
             So you want to be a data scientist
         </div>
-        <div style={styles.body}>
+        <div contentEditable style={styles.body}>
             You may have heard about machine learning from interesting applications like <a href="">spam filtering</a>, optical character recognition, and computer vision.
             Getting started with machine learning is long process that involves going through several resources. There are books for newbies, academic papers, guided exercises, and standalone projects. It’s easy to lose track of what you need to learn among all these options.
         </div>

@@ -3,8 +3,8 @@ import React from 'react'
 const Avatar = ({ size, image }) => {
     const avatar = {
         borderRadius: '500px',
-        width: size,
-        height: size,
+        width: `${size}rem`,
+        height: `${size}rem`,
         backgroundSize: 'cover',
         backgroundImage: `url(${image})` 
     }
@@ -12,7 +12,7 @@ const Avatar = ({ size, image }) => {
 }
 
 Avatar.defaultProps = {
-    size: '2.2rem',
+    size: 3,
     image: ''
 }
 

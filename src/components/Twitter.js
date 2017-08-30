@@ -37,19 +37,20 @@ const styles = {
         fontFamily: 'sans-serif',
         fontSize: '0.9rem',
         opacity: 0.8,
-        lineHeight: '1.3rem'
+        lineHeight: '1.3rem',
+        marginBottom: '0.75rem'
     }
 }
 
 import Code from '../components/Code'
-import Avatar from '../components/Avatar'
+import Logo from '../components/Logo'
 
 const Twitter = ({ tweaks }) =>
     <div style={styles.wrapper}>
         <div style={styles.content}>
             <div style={styles.profile}>
                 <div style={styles.avatar}>
-                    <Avatar image={tweaks.avatar} size="3rem" />
+                    <Logo tweaks={tweaks} />
                 </div>
                 <div>
                     <div style={styles.name}>
@@ -59,7 +60,9 @@ const Twitter = ({ tweaks }) =>
                     </div>
                     <div style={styles.body}>
                         You may have heard about machine learning from interesting applications like spam filtering, optical character recognition.
+                        {tweaks.symbol} 
                     </div>
+                    <Code tweaks={tweaks} rounded="true" />
                 </div>
             </div>
             
