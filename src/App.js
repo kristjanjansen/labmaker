@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Tweaker from './components/Tweaker'
 import Medium from './components/Medium'
+import Twitter from './components/Twitter'
 import Code from './components/Code'
 
 class App extends Component {
@@ -10,7 +11,9 @@ class App extends Component {
         tweaks: {
             first: 5,
             second: 0,
-            avatar: "https://d3iw72m71ie81c.cloudfront.net/male-43.jpg"
+            avatar: 'https://d3iw72m71ie81c.cloudfront.net/male-43.jpg',
+            symbol: '❂',
+            name: 'bla'
         }
     }
 
@@ -20,9 +23,9 @@ class App extends Component {
         const { tweaks } = this.state
         return (
             <div>
-                <Tweaker tweaks={tweaks} onTweak={this.onTweak} />
                 <hr />
-                <Code tweaks={tweaks} />
+                <Twitter tweaks={tweaks} />
+                <Tweaker tweaks={tweaks} onTweak={this.onTweak} />
                 <hr />
                 <Medium tweaks={tweaks} />
                 <hr />
