@@ -38,14 +38,14 @@ const styles = {
     }
 }
 
-const SampleMedium = ({ values }) => {
+const SampleMedium = ({ tweaks }) => {
     const wrapper = {
         ...styles.wrapper,
-        padding: values.first + 'em'
+        padding: tweaks.first + 'em'
     }
     const avatar = {
         ...styles.avatar,
-        backgroundImage: `url(${values.avatar})` 
+        backgroundImage: `url(${tweaks.avatar})` 
     }
     return (
         <div style={wrapper}>

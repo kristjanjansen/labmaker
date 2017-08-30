@@ -6,11 +6,12 @@ const styles = {
     code: {
         fontFamily: 'Roboto Mono, sans-serif',
         padding: '1.5rem',
-        fontSize: '0.85rem'
+        fontSize: '0.85rem',
+        margin: 0
     }
 }
 
-const SampleCode = ({ values }) =>
+const SampleCode = ({ tweaks }) =>
     <SyntaxHighlighter
         language="javascript"
         style={style}

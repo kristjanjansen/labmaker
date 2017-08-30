@@ -15,45 +15,45 @@ const styles = {
 class Adjuster extends Component {
 
     state = {
-        values: {}
+        tweaks: {}
     }
 
     componentWillMount() {
-        const { values } = this.props;
-        this.setState({ values })    
+        const { tweaks } = this.props;
+        this.setState({ tweaks })    
     }
 
     handleChange = (e) => {
-        const { onAdjust } = this.props;
-        const { values } = this.state
-        values[e.target.name] = e.target.value
-        this.setState({ values })
-        onAdjust(values)
+        const { onTweak } = this.props;
+        const { tweak } = this.state
+        tweaks[e.target.name] = e.target.tweak
+        this.setState({ tweaks })
+        onTweak(tweaks)
     }
 
     render() {
-        const { values } = this.state
+        const { tweaks } = this.state
         return (
             <div style={styles.wrapper}> 
                 <input
                     style={styles.field}
                     type="range"
                     name="first"
-                    value={values.first}
+                    value={tweaks.first}
                     onChange={this.handleChange}
                 />
                 <input
                     style={styles.field}
                     type="range"
                     name="second"
-                    value={values.second}
+                    value={tweaks.second}
                     onChange={this.handleChange}
                 />
                 <input
                     style={{...styles.field}}
                     type="text"
                     name="avatar"
-                    value={values.avatar}
+                    value={tweaks.avatar}
                     onChange={this.handleChange}
                 />
             </div>
