@@ -5,6 +5,7 @@ import Medium from './components/Medium'
 import Twitter from './components/Twitter'
 import Code from './components/Code'
 import Logo from './components/Logo'
+import Speakerdeck from './components/Speakerdeck'
 
 const styles = {
     wrapper: {
@@ -41,6 +42,7 @@ class App extends Component {
         return (
             <div style={styles.wrapper}>
                 <div style={styles.left}>
+                    <Speakerdeck tweaks={tweaks} />
                     <Twitter tweaks={tweaks} />
                     <hr />
                     <Medium tweaks={tweaks} />
