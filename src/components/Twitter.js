@@ -58,7 +58,7 @@ const Twitter = ({ tweaks }) =>
                         <span style={styles.handle}>@{tweaks.name}</span> 
                         <span style={styles.date}>• Sep 26, 2016</span>
                     </div>
-                    <div style={styles.body}>
+                    <div contentEditable style={styles.body}>
                         You may have heard about machine learning from interesting applications like spam filtering, optical character recognition.
                         {tweaks.symbol} 
                     </div>

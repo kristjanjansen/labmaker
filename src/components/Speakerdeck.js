@@ -35,7 +35,6 @@ const styles = {
         letterSpacing: '0.03em',
     },
     body: {
-        fontFamily: 'Roboto Mono, sans-serif',
         padding: '1.5rem',
         fontSize: '0.85rem',
         color: 'rgba(255,255,255,0.8)',
@@ -45,10 +44,9 @@ const styles = {
         height: '14rem'
     },
     title: {
-        fontFamily: 'Rubik, sans-serif',
         fontSize: '2.5rem',
         color: 'rgba(255,255,255,0.8)',
-        lineHeight: '2.5rem'
+        lineHeight: '2.75rem'
     }
 }
 
@@ -61,6 +59,14 @@ const Speakerdeck = ({ size, tweaks }) => {
         ...styles.slide,
         backgroundColor: tweaks.background
     }
+    const title = {
+        ...styles.title,
+        fontFamily: tweaks.titlefont,
+        fontWeight: tweaks.titleweight
+    }
+    const subtitle = {
+        fontFamily: tweaks.monospacefont.split(':')[0]
+    }
     return (
         <div style={styles.wrapper}>
             <div style={slide}>
@@ -69,8 +75,8 @@ const Speakerdeck = ({ size, tweaks }) => {
                     <div>Published on Apr 21, 2017</div>
                 </div>
                 <div style={styles.body}>
-                    <div style={styles.title}>So you want to be a data scientist</div>
-                    <div>{tweaks.employeename} {tweaks.symbol}  {tweaks.name}</div>
+                    <div style={title}>So you want to be a data scientist</div>
+                    <div style={subtitle}>{tweaks.employeename} {tweaks.symbol}  {tweaks.name}</div>
                 </div>
             </div>
         </div>

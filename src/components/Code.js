@@ -4,7 +4,6 @@ import { hybrid as style } from 'react-syntax-highlighter/dist/styles';
 
 const styles = {
     code: {
-        fontFamily: 'Roboto Mono, sans-serif',
         padding: '1.5rem',
         fontSize: '0.85rem',
         margin: 0
@@ -16,7 +15,8 @@ const Code = ({ tweaks, rounded }) => {
     const customStyle = {
         ...styles.code,
         borderRadius: rounded ? '5px' : '',
-        background: tweaks.background
+        background: tweaks.background,
+        fontFamily: tweaks.monospacefont,
     }
 
     return (
@@ -25,6 +25,7 @@ const Code = ({ tweaks, rounded }) => {
         style={style}
         customStyle={customStyle}
         CodeTag="div"
+        contentEditable
     >
 {`def inference(images):
     with tf.variable_scope('conv1') as scope:
