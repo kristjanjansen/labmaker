@@ -44,15 +44,6 @@ class Tweaker extends Component {
         const { tweaks } = this.state
         return (
             <div style={styles.wrapper}> 
-                {/*
-                <input
-                    style={styles.field}
-                    type="range"
-                    name="first"
-                    value={tweaks.first}
-                    onChange={this.handleChange}
-                />
-                */}
                 <div style={styles.label}>Company name</div>
                 <input
                     style={styles.field}
@@ -101,6 +92,33 @@ class Tweaker extends Component {
                         onChange={this.handleChange}
                     />
                 </div>
+                <div style={styles.label}>Monospace font</div>
+                <input
+                    style={styles.field}
+                    type="text"
+                    name="monospacefont"
+                    value={tweaks.monospacefont}
+                    onChange={this.handleChange}
+                />
+                <div style={styles.label}>Title font</div>
+                <input
+                    style={styles.field}
+                    type="text"
+                    name="titlefont"
+                    value={tweaks.titlefont}
+                    onChange={this.handleChange}
+                />
+                <div style={styles.label}>Title weight: {tweaks.titleweight}</div>
+                <input
+                    style={{...styles.field, padding: 0}}
+                    type="range"
+                    step="100"
+                    min="100"
+                    max="900"
+                    name="titleweight"
+                    value={tweaks.titleweight}
+                    onChange={this.handleChange}
+                />
             </div>
         )
     }

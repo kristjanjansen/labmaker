@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 
 import Tweaker from './components/Tweaker'
+import Terminal from './components/Terminal'
 import Medium from './components/Medium'
 import Twitter from './components/Twitter'
 import Code from './components/Code'
 import Logo from './components/Logo'
 import Speakerdeck from './components/Speakerdeck'
+import WebfontLoader from '@dr-kobros/react-webfont-loader';
 
 const styles = {
     wrapper: {
@@ -31,7 +33,10 @@ class App extends Component {
             symbol: '❂',
             name: 'bla',
             background: '#333',
-            employeename: 'Lee Chow'
+            employeename: 'Lee Chow',
+            monospacefont: 'Roboto Mono',
+            titlefont: 'Rubik',
+            titleweight: 600
         }
     }
 
@@ -39,18 +44,25 @@ class App extends Component {
 
     render() {
         const { tweaks } = this.state
+        const fonts = { google: { families: [
+            tweaks.monospacefont,
+            tweaks.titlefont
+        ]}}
         return (
-            <div style={styles.wrapper}>
-                <div style={styles.left}>
-                    <Speakerdeck tweaks={tweaks} />
-                    <Twitter tweaks={tweaks} />
-                    <hr />
-                    <Medium tweaks={tweaks} />
+            <WebfontLoader config={fonts}>
+                <div style={styles.wrapper}>
+                    <div style={styles.left}>
+                        
+                        <Twitter tweaks={tweaks} />
+                        <hr />
+                        <Medium tweaks={tweaks} />
+                        <Speakerdeck tweaks={tweaks} />
+                    </div>
+                    <div style={styles.right}>
+                        <Tweaker tweaks={tweaks} onTweak={this.onTweak} />
+                    </div>
                 </div>
-                <div style={styles.right}>
-                    <Tweaker tweaks={tweaks} onTweak={this.onTweak} />
-                </div>
-            </div>
+            </WebfontLoader>
         )
     }
 
