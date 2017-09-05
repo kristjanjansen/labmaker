@@ -25,7 +25,6 @@ const Code = ({ tweaks, rounded }) => {
         style={style}
         customStyle={customStyle}
         CodeTag="div"
-        contentEditable
     >
 {`def inference(images):
     with tf.variable_scope('conv1') as scope:

@@ -68,10 +68,10 @@ const Medium = ({ tweaks }) =>
                 </div>
             </div>
             <Code tweaks={tweaks} />
-            <div contentEditable style={styles.title}>
+            <div style={styles.title}>
                 So you want to be a data scientist
             </div>
-            <div contentEditable style={styles.body}>
+            <div style={styles.body}>
                 You may have heard about machine learning from interesting applications like <a href="">spam filtering</a>, optical character recognition, and computer vision.
                 Getting started with machine learning is long process that involves going through several resources. There are books for newbies, academic papers, guided exercises, and standalone projects. It’s easy to lose track of what you need to learn among all these options.
             </div>

@@ -52,7 +52,7 @@ class App extends Component {
             <WebfontLoader config={fonts}>
                 <div style={styles.wrapper}>
                     <div style={styles.left}>
-                        
+                        <Terminal tweaks={tweaks} />
                         <Twitter tweaks={tweaks} />
                         <hr />
                         <Medium tweaks={tweaks} />
