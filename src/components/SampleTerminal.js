@@ -9,24 +9,32 @@ const styles = {
         fontFamily: 'Monaco, monospace',
         height: '10rem',
         background: 'rgba(0,0,0,0.9)',
-        color: '#ddd',
+        color: '#aaa',
         whiteSpace: 'pre'
     },
-    em: {
-        color: 'red'
+    strong: {
+        color: '#fafafa'
     }
+}
+
+function convertToInline(style) {
+    var inline = ''
+    for (var key in style) {
+        inline += `${key}: ${style[key]};`
+    }
+    return inline
 }
 
 function formatMarkdown(text) {
     let renderer = new marked.Renderer();
     renderer.strong = text => {
-        return `<span style="color: red">${text}</span>`
+        return `<span style="${convertToInline(styles.strong)}">${text}</span>`
     }
     return marked(text, { renderer, breaks: true})
 }
 
    
-const Terminal = ({ tweaks }) => {
+const SampleTerminal = ({ tweaks }) => {
     return (
         <div
             style={styles.body}
@@ -38,4 +46,4 @@ const Terminal = ({ tweaks }) => {
     )
 }
 
-export default Terminal
+export default SampleTerminal

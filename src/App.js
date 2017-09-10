@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
+import WebfontLoader from '@dr-kobros/react-webfont-loader';
 
+import SampleWeb from './components/SampleWeb'
 import Tweaker from './components/Tweaker'
-import Terminal from './components/Terminal'
-import Medium from './components/Medium'
+import SampleTerminal from './components/SampleTerminal'
+import SampleMedium from './components/SampleMedium'
 import Twitter from './components/Twitter'
 import Code from './components/Code'
 import Logo from './components/Logo'
 import Speakerdeck from './components/Speakerdeck'
-import WebfontLoader from '@dr-kobros/react-webfont-loader';
+
 
 const styles = {
     wrapper: {
@@ -52,10 +54,11 @@ class App extends Component {
             <WebfontLoader config={fonts}>
                 <div style={styles.wrapper}>
                     <div style={styles.left}>
-                        <Terminal tweaks={tweaks} />
+                        <SampleWeb />
+                        <SampleTerminal tweaks={tweaks} />
                         <Twitter tweaks={tweaks} />
                         <hr />
-                        <Medium tweaks={tweaks} />
+                        <SampleMedium tweaks={tweaks} />
                         <Speakerdeck tweaks={tweaks} />
                     </div>
                     <div style={styles.right}>

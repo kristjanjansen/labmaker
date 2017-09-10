@@ -50,7 +50,7 @@ const fonts = { google: { families: [
     'Merriweather Sans:700'
 ]}}
 
-const Medium = ({ tweaks }) =>
+const SampleMedium = ({ tweaks }) =>
     <WebfontLoader config={fonts}>
         <div style={styles.wrapper}>
             <div style={styles.logo}>
@@ -78,4 +78,4 @@ const Medium = ({ tweaks }) =>
         </div>
     </WebfontLoader>
 
-export default Medium
+export default SampleMedium
