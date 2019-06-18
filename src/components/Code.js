@@ -28,10 +28,7 @@ const Code = ({ tweaks, rounded }) => {
     >
 {`def inference(images):
     with tf.variable_scope('conv1') as scope:
-        kernel = _variable_with_weight_decay('weights',
-             shape=[5, 5, 3, 64],
-             stddev=5e-2,
-             wd=0.0)
+        kernel = _variable_with_weight_decay('weights')
 `}            
     </SyntaxHighlighter>
     )

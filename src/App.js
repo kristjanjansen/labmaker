@@ -29,9 +29,9 @@ class App extends Component {
         tweaks: {
             first: 5,
             second: 0,
-            avatar: 'https://d3iw72m71ie81c.cloudfront.net/male-43.jpg',
+            avatar: 'https://randomuser.me/api/portraits/men/92.jpg',
             symbol: '❂',
-            name: 'bla',
+            name: 'lab',
             background: '#333',
             employeename: 'Lee Chow',
             monospacefont: 'Roboto Mono',
@@ -52,10 +52,10 @@ class App extends Component {
             <WebfontLoader config={fonts}>
                 <div style={styles.wrapper}>
                     <div style={styles.left}>
-                        <Terminal tweaks={tweaks} />
-                        <Twitter tweaks={tweaks} />
-                        <hr />
+                        {/*<Terminal tweaks={tweaks} />*/}
                         <Medium tweaks={tweaks} />
+                        <hr />
+                        <Twitter tweaks={tweaks} />
                         <Speakerdeck tweaks={tweaks} />
                     </div>
                     <div style={styles.right}>

@@ -5,10 +5,10 @@ const styles = {
     wrapper: {
         background: 'white',
         fontFamily: 'sans-serif',
-        padding: '4em'
+        padding: '2em'
     },
     logo: {
-        marginBottom: '3rem'
+        marginBottom: '2rem'
     },
     profile: {
         display: 'flex',
@@ -73,7 +73,6 @@ const Medium = ({ tweaks }) =>
             </div>
             <div style={styles.body}>
                 You may have heard about machine learning from interesting applications like <a href="">spam filtering</a>, optical character recognition, and computer vision.
-                Getting started with machine learning is long process that involves going through several resources. There are books for newbies, academic papers, guided exercises, and standalone projects. It’s easy to lose track of what you need to learn among all these options.
             </div>
         </div>
     </WebfontLoader>

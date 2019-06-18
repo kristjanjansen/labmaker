@@ -13,14 +13,14 @@ const styles = {
         whiteSpace: 'pre'
     },
     em: {
-        color: 'red'
+        color: 'rgb(58,187,49)'
     }
 }
 
 function formatMarkdown(text) {
     let renderer = new marked.Renderer();
     renderer.strong = text => {
-        return `<span style="color: red">${text}</span>`
+        return `<span style="color: rgb(58,187,49)">${text}</span>`
     }
     return marked(text, { renderer, breaks: true})
 }
